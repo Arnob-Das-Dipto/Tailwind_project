@@ -1,0 +1,684 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</head>
+<body class="font-body">
+    <!-- Header Start -->
+    <header class="mt-9 xl:px-32">
+        <div class="container">
+            <nav x-data="{open:false}">
+                <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center pl-1 lg:pl-2.5">
+                        <div class="md:pr-6 lg:pr-10 xl:pr-14">
+                            <a href="#" class="inline-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="154" height="39" viewBox="0 0 154 39" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 19.0826C0 8.50115 8.92925 0 19.671 0C30.5713 0 39.6317 8.62679 39.6317 19.3632V34.1787C39.6336 34.3139 39.6335 34.4476 39.6311 34.5799C39.5958 36.5821 37.9154 38.1823 35.8661 38.165C33.8168 38.1477 32.1648 36.5195 32.1648 34.517V34.236C32.1254 32.42 31.2304 29.4481 29.1449 26.9076C27.0814 24.3939 23.984 22.4501 19.5287 22.4501C17.4667 22.4501 15.7952 20.8168 15.7952 18.8019C15.7952 16.7871 17.4667 15.1538 19.5287 15.1538C24.8028 15.1538 29.01 16.9544 32.1648 19.5369V19.3632C32.1648 12.7412 26.5348 7.29628 19.671 7.29628C12.9657 7.29628 7.46684 12.6156 7.46684 19.0826C7.46684 25.592 12.8671 30.8689 19.5287 30.8689H19.8158C21.8778 30.8689 23.5493 32.5022 23.5493 34.517C23.5493 36.5318 21.8778 38.1651 19.8158 38.1651H19.5287C8.74328 38.1651 0 29.6216 0 19.0826Z" fill="#1FB07E"/>
+                                    <path d="M66.103 26.0844H54.5008L52.3636 32H48.6997L58.3173 5.55153H62.3247L71.9041 32H68.2403L66.103 26.0844ZM65.1107 23.2602L60.3019 9.82602L55.4931 23.2602H65.1107Z" fill="#383737"/>
+                                    <path d="M79.5687 13.9479V26.2752C79.5687 27.2929 79.785 28.0181 80.2176 28.4506C80.6501 28.8577 81.4007 29.0613 82.4693 29.0613H85.0264V32H81.8968C79.9631 32 78.5128 31.5547 77.546 30.6642C76.5791 29.7737 76.0957 28.3107 76.0957 26.2752V13.9479H73.386V11.0855H76.0957V5.81868H79.5687V11.0855H85.0264V13.9479H79.5687Z" fill="#383737"/>
+                                    <path d="M92.7074 13.9479V26.2752C92.7074 27.2929 92.9237 28.0181 93.3562 28.4506C93.7887 28.8577 94.5393 29.0613 95.6079 29.0613H98.165V32H95.0355C93.1018 32 91.6515 31.5547 90.6846 30.6642C89.7178 29.7737 89.2344 28.3107 89.2344 26.2752V13.9479H86.5246V11.0855H89.2344V5.81868H92.7074V11.0855H98.165V13.9479H92.7074Z" fill="#383737"/>
+                                    <path d="M100.312 21.4664C100.312 19.3291 100.745 17.4591 101.61 15.8561C102.475 14.2277 103.658 12.9683 105.159 12.0778C106.686 11.1872 108.378 10.742 110.235 10.742C112.067 10.742 113.657 11.1364 115.006 11.9251C116.354 12.7139 117.359 13.7061 118.021 14.902V11.0855H121.532V32H118.021V28.1071C117.334 29.3284 116.303 30.3461 114.929 31.1603C113.581 31.9491 112.003 32.3435 110.197 32.3435C108.339 32.3435 106.66 31.8855 105.159 30.9695C103.658 30.0535 102.475 28.7687 101.61 27.1148C100.745 25.461 100.312 23.5782 100.312 21.4664ZM118.021 21.5046C118.021 19.9271 117.703 18.5531 117.067 17.3827C116.431 16.2123 115.565 15.3218 114.471 14.7112C113.403 14.0751 112.22 13.757 110.922 13.757C109.624 13.757 108.441 14.0624 107.373 14.673C106.304 15.2836 105.452 16.1742 104.816 17.3446C104.179 18.515 103.861 19.8889 103.861 21.4664C103.861 23.0693 104.179 24.4687 104.816 25.6646C105.452 26.835 106.304 27.7382 107.373 28.3743C108.441 28.9849 109.624 29.2902 110.922 29.2902C112.22 29.2902 113.403 28.9849 114.471 28.3743C115.565 27.7382 116.431 26.835 117.067 25.6646C117.703 24.4687 118.021 23.0821 118.021 21.5046Z" fill="#383737"/>
+                                    <path d="M128.431 7.68878C127.77 7.68878 127.21 7.45979 126.752 7.0018C126.294 6.54382 126.065 5.98407 126.065 5.32254C126.065 4.66101 126.294 4.10125 126.752 3.64327C127.21 3.18529 127.77 2.9563 128.431 2.9563C129.068 2.9563 129.602 3.18529 130.034 3.64327C130.492 4.10125 130.721 4.66101 130.721 5.32254C130.721 5.98407 130.492 6.54382 130.034 7.0018C129.602 7.45979 129.068 7.68878 128.431 7.68878ZM130.111 11.0855V32H126.638V11.0855H130.111Z" fill="#383737"/>
+                                    <path d="M145.457 10.7038C148.001 10.7038 150.062 11.4798 151.639 13.0319C153.217 14.5585 154.006 16.7721 154.006 19.6726V32H150.571V20.1688C150.571 18.0824 150.049 16.4922 149.006 15.3981C147.963 14.2786 146.538 13.7189 144.732 13.7189C142.9 13.7189 141.437 14.2913 140.343 15.4363C139.274 16.5813 138.74 18.2478 138.74 20.4359V32H135.267V11.0855H138.74V14.0624C139.427 12.9937 140.355 12.1668 141.526 11.5816C142.722 10.9964 144.032 10.7038 145.457 10.7038Z" fill="#383737"/>
+                                </svg>
+                            </a> 
+                        </div>
+
+                        <div class="hidden md:block">
+                            <ul class="hidden md:flex md:justify-between md:items-center">
+                                <li><a href="#" class="block relative after:absolute after:bottom-[-8px] after:right-[33%] after:h-1 after:w-[15px] after:transition-all after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic font-normal leading-6 md:mr-1 lg:mr-4">Home</a></li>
+                                <li><a href="#" class="block relative mx-auto after:absolute after:bottom-[-8px]    after:right-[33%] after:h-1 after:w-[15px] after:transition-all after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic  font-normal leading-6 md:mr-1 lg:mr-4 xl:mr-7">Why Attain</a></li>
+                                <li><a href="#" class="block relative mx-auto after:absolute after:bottom-[-8px]    after:right-[33%] after:h-1 after:w-[15px] after:transition-all after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic  font-normal leading-6 md:mr-2 lg:mr-4 xl:mr-7">Solutions</a></li>
+                                <li><a href="#" class="block relative mx-auto after:absolute after:bottom-[-8px]    after:right-[33%] after:h-1 after:w-[15px] after:transition-all after:duration-300  hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic  font-normal leading-6 md:mr-2 lg:mr-4 xl:mr-7">Pricing</a></li>
+                                <li><a href="#" class="block relative mx-auto after:absolute after:bottom-[-8px]    after:right-[33%] after:h-1 after:w-[15px] after:transition-all after:duration-300  hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic  font-normal leading-7 md:mr-1">Resources</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sm:flex sm:flex-row-reverse sm:justify-between items-center pr-2">
+                        <!-- Menu button for mobile -->
+                        <div class="flex justify-between items-center md:hidden">
+                            <button @click="open = !open" class="text-gray-300 hover:text-white focus:outline-none">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                                    <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"></path>
+                                    <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" fill="black"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="sm:mr-2 md:mr-0">
+                            <div class="sm:inline-flex sm:justify-center sm:items-center md:mr-0 lg:mr-2.5">
+                                <a href="#" class="block text-night_rider text-base not-italic font-normal leading-6 mr-2 lg:mr-5">Log in</a>
+                                <a href="#" class="block text-mine_shaft text-base not-italic font-medium leading-4 text-center border-2 border-solid border-mine_shaft rounded-full sm:py-2 md:py-3 sm:px-2 md:px-4 xl:py-[14px] xl:px-6 hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn">Book a Demo 
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-show="open" class="bg-gray-400 md:hidden border rounded mx-6 transition duration-500 ease-in">
+                    <div class="mx-6 pt-2 pb-3 space-y-1">
+                        <ul class="md:flex md:justify-between md:items-center">
+                            <li class="md:list-none py-4"><a href="#" class="block relative mx-auto after:absolute  after:bottom-[-8px] after:right-[33%] after:h-1 after:w-[15px] after:transition-all  after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic font-normal leading-6 md:mr-1 lg:mr-4 xl:mr-7">Home</a></li>
+                            <li class="lg:list-none py-4"><a href="#" class="block relative mx-auto after:absolute  after:bottom-[-8px] after:right-[33%] after:h-1 after:w-[15px] after:transition-all  after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic font-normal leading-6 md:mr-1 lg:mr-4 xl:mr-7">Why Attain</a></li>
+                            <li class="lg:list-none py-4"><a href="#" class="block relative mx-auto after:absolute  after:bottom-[-8px] after:right-[33%] after:h-1 after:w-[15px] after:transition-all  after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic font-normal leading-6 md:mr-2 lg:mr-4 xl:mr-7">Solutions</a></li>
+                            <li class="lg:list-none py-4"><a href="#" class="block relative mx-auto after:absolute  after:bottom-[-8px] after:right-[33%] after:h-1 after:w-[15px] after:transition-all  after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic font-normal leading-6 md:mr-2 lg:mr-4 xl:mr-7">Pricing</a></li>
+                            <li class="lg:list-none py-4"><a href="#" class="block relative mx-auto after:absolute  after:bottom-[-8px] after:right-[33%] after:h-1 after:w-[15px] after:transition-all  after:duration-300 hover:after:w-[40%] hover:after:bg-mine_shaft text-mine_shaft text-base not-italic font-normal leading-7 md:mr-1">Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Banner Start  -->
+    <section class="mt-7">
+        <div class="container">
+            <div class="sm:flex lg:flex xl:flex lg:justify-between xl:justify-between sm:items-center lg:items-center xl:items-center sm:flex-nowrap sm:flex-col-reverse lg:flex-row lg:flex-wrap xl:flex-wrap">
+                <div class="lg:w-1/2 pl-2.5 xl:pl-24">
+                    <h1 class="relative text-night_rider sm:text-4xl md:text-5xl md:text-[56px] lg:text-[60px] xl:text-[78px] not-italic font-medium sm:mt-4 md:mt-8 md:px-2 lg:px-0 sm:mb-2 md:mb-2 xl:mb-6 sm:leading-[60px] md:leading-[64px] lg:leading-[84px] xl:pr-6">Engagement with <div class="inline-block bg-orangish sm:w-[170px] md:w-[260px] lg:w-[280px] xl:w-[362px] sm:h-2 lg:h-4 xl:h-5"></div> <span class="absolute sm:left-0 md:left-[450px] lg:left-0 xl:left-[166px] md:top-0 lg:top-20 xl:top-20">customers</span> starts here.</h1>
+                    <p class="text-nevada lg:text-base xl:text-lg not-italic font-normal lg:mb-8 xl:mb-10 lg:leading-5 xl:leading-7 md:pl-2 lg:pr-0 xl:pr-11">Connect and collaborate with consumers via chat, video, browsing, and other methods. With Attain's digital platform, you can improve resolutions, satisfaction, and income.</p>
+                    <div class="inline-flex justify-center items-center sm:mt-6 md:ml-2 lg:ml-0 mb-6 lg:mb-0 lg-mt-0">
+                        <a class="block text-base not-italic font-normal leading-4 text-center border-2 border-solid border-mine_shaft rounded-full sm:py-2 sm:px-3 md:py-4 md:px-5 lg:py-5 lg:px-9 mr-5 hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Book a demo
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a class="block text-base not-italic font-normal leading-4 border-2 border-solid border-mine_shaft rounded-full sm:py-2 sm:px-3 md:py-4 md:px-5 lg:py-5 lg:px-9  hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Try For Free
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M4 12L12 4" stroke="#383737" stroke-width="1.5" stroke-linecap="round"    stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M5.5 4H12V10.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round"    stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <img src="./img/Image.png" alt="banner">
+                </div>
+
+                <div class="pt-28 lg:pl-2 xl:pl-24 lg:pb-8 xl:pb-10 sm:hidden lg:flex xl:flex">
+                    <a href="#" class="block p-6 border-2 rounded-full border-nevada stroke-1 stroke-nevada hover:bg-black transition transform hover:scale-75 duration-500 group/btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M21 9V35.4375" stroke="#383737" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M7.5625 22L21 35.4375L34.4375 22" stroke="#383737" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Promo Start -->
+    <section class="py-14 bg-snow">
+        <div class="container">
+            <h2 class="text-night_rider sm:text-2xl lg:text-3xl xl:text-4xl not-italic font-normal lg:leading-8 xl:leading-9 text-center sm:mb-10 lg:mb-12 xl:mb-8">Join the 14k + business using Attain</h2>
+            <div class="sm:flex sm:flex-col sm:items-center md:flex-row md:flex md:justify-between md:items-center md:px-2 lg:px-40 xl:px-56">
+                <img src="./img/image 23.jpg" alt="promo">
+                <img src="./img/image 24.jpg" alt="promo">
+                <img src="./img/image 25.jpg" alt="promo">
+                <img src="./img/image 26.jpg" alt="promo">
+                <img src="./img/image 27.jpg" alt="promo">
+                <img src="./img/image 28.jpg" alt="promo">
+            </div>
+        </div>
+    </section>
+    <!-- Promo End -->
+
+    <!-- Services Start -->
+    <section class="sm:mt-4 md:mt-24 lg:ml-2 xl:pl-32 lg:mr-2 xl:pr-32">
+        <div class="container">
+            <div class="sm:flex sm:flex-col lg:flex lg:justify-between lg:flex-row">
+                <div class="w-1/2 mt-[38px] pl-2 lg:pl-0">
+                    <h2 class="text-night_rider sm:text-3xl lg:text-4xl xl:text-5xl not-italic font-normal lg:leading-[50px] xl:leading-[56px] sm:mb-4 lg:mb-9 xl:mb-11 lg:pr-22 xl:pr-24">Attain Is customer communication platform</h2>
+                    <div class="sm:flex sm:flex-col lg:flex lg:flex-col sm:gap-y-4 lg:mr-20 xl:flex xl:flex-row xl:mr-24 sm:mb-4 lg:mb-0">
+                        <a class="inline-block text-mine_shaft text-base not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full sm:text-center py-4 xl:py-5 px-5 xl:px-9 mr-5 hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Get started 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a class="text-mine_shaft text-base not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full lg:text-center sm:py-4 xl:py-5 sm:px-5 xl:px-9 hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn text-center" href="#">Browse Services
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Part Start -->
+                <div class="md:flex md:justify-between md:items-center md:mb-4 lg:mb-0 lg:flex lg:justify-end lg:items-center lg:flex-row md:mx-2 lg:mx-0">
+                    <div class="border-2 border-solid border-floral_white w-[338px] xl:w-[342px] md:h-[378px] xl:h-[381px] hover:bg-floral_white ml-10 mb-4 md:ml-2 lg:ml-0 lg:mb-0"> 
+                        <div class="w-[39px] h-[1.5px] bg-mine_shaft mt-16 ml-[38px]"></div>    
+                        <h3 class="text-mine_shaft text-2xl not-italic font-medium leading-6 pl-10 pt-9">Support</h3>
+                        <p class="text-nevada text-base not-italic font-normal leading-6 pt-4 pl-10 pr-10">Deliver faster, more personalized support with shared screens and a Support Bot </p>
+                        <div class="flex">
+                            <a href="#" class="inline-block p-4 lg:mr-2 mt-20 ml-64 mb-10 border-2 border-solid border-dark_gray rounded-full hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg] hover:border-none group/btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="border-2 border-solid border-floral_white w-[338px] xl:w-[342px] md:h-[378px] xl:h-[381px] hover:bg-floral_white ml-10 md:ml-0 mb-4 md:mr-2 lg:mr-0 lg:mb-0"> 
+                        <div class="w-[39px] h-[1.5px] bg-mine_shaft mt-16 ml-[38px]"></div>    
+                        <h3 class="text-mine_shaft text-2xl not-italic font-medium leading-6 pl-10 pt-8">Sale</h3>
+                        <p class="text-nevada text-base not-italic font-normal leading-6 pt-4 pl-10 pr-6">Identify qualified customers with easy-to-use live chat messaging and Al-based Sales Bot</p>
+                        <div class="flex">
+                            <a href="#" class="inline-block lg:mr-2 p-4 mt-20 ml-64 mb-10 border-2 border-solid rounded-full border-dark_gray hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg] hover:border-none group/btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Part End --> 
+            </div>
+
+            <!-- 2nd Card Part Start -->
+            <div class="md:flex md:flex-row md:justify-between md:items-center md:ml-3 lg:ml-0 md:mb-4 lg:mb-0  xl:justify-end lg:items-center">
+                <div class="border-2 border-solid border-floral_white sm:w-[338px] sm:h-[381px] md:w-[220px] md:h-[378px] lg:w-[342px] xl:w-[342px] lg:h-[378px] xl:h-[381px] hover:bg-floral_white ml-10 md:ml-0 mb-4 lg:mb-0"> 
+                    <div class="w-[39px] h-[1.5px] bg-mine_shaft mt-16 ml-[38px]"></div>    
+                    <h3 class="text-mine_shaft text-2xl not-italic font-medium leading-6 pl-10 pt-8">Experience</h3>
+                    <p class="text-nevada text-base not-italic font-normal leading-6 pt-4 pl-10 pr-10">Facilitate impactful experiences for customers through real-time engagement</p>
+                    <div class="flex">
+                        <a href="#" class="inline-block lg:mr-2 p-4 mt-20 ml-64 md:mt-4 lg:mt-20 md:ml-32 lg:ml-64 mb-10 border-2 border-solid rounded-full border-dark_gray hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg] hover:border-none group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="border-2 border-solid border-floral_white sm:w-[338px] sm:h-[381px] md:w-[220px] md:h-[378px] lg:w-[342px] xl:w-[342px] lg:h-[378px] xl:h-[381px] hover:bg-floral_white ml-10 md:ml-0 sm:mb-4 md:mb-0"> 
+                    <div class="w-[39px] h-[1.5px] bg-mine_shaft mt-16 ml-[38px]"></div>    
+                    <h3 class="text-mine_shaft text-2xl not-italic font-medium leading-6 pl-10 pt-8">Automate</h3>
+                    <p class="text-nevada text-base not-italic font-normal leading-6 pt-4 pl-10 pr-6">Attain's Bots work alongside your team members to automate work and save your time</p>
+                    <div class="flex">
+                        <a href="#" class="inline-block lg:mr-2 p-4 mt-20 ml-64 md:mt-4 lg:mt-20 md:ml-32 lg:ml-64 mb-10 border-2 border-solid rounded-full border-dark_gray hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg] hover:border-none group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-2 border-solid border-floral_white sm:w-[338px] sm:h-[381px] md:w-[220px] md:h-[378px] lg:w-[342px] xl:w-[342px] lg:h-[378px] xl:h-[381px] hover:bg-floral_white ml-10 md:ml-0 md:mr-4 lg:mr-0"> 
+                    <div class="w-[39px] h-[1.5px] bg-mine_shaft mt-16 ml-[38px]"></div>    
+                    <h3 class="text-mine_shaft text-2xl not-italic font-medium leading-6 pl-10 pt-8">Engage</h3>
+                    <p class="text-nevada text-base not-italic font-normal leading-6 mt-4 pb-24 pl-9 pr-8">Take the lead and proactively engage to boost conversion.</p>
+                    <div class="flex">
+                        <a href="#" class="inline-block lg:mr-2 p-4 md:mt-[-36px] lg:mt-2 ml-64 md:ml-32 lg:ml-64 border-2 border-solid rounded-full border-dark_gray hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg] hover:border-none group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd Card Part End -->
+        </div>               
+    </section>   
+    <!-- Services End -->
+
+    <!-- Services Part 2 Start  -->
+    <section class="mt-8 md:mt-36 sm:overflow-hidden">
+        <div class="container">
+            <div class="sm:flex sm:flex-col sm:items-center md:flex-row md:flex md:justify-start md:items-center">
+                <div class="xl:w-1/2 ml-12">
+                    <img src="./img/Group 86.png" alt="Services-1">
+                </div>
+
+                <div class="w-1/2">
+                    <h2 class="text-night_rider sm:text-2xl lg:text-3xl xl:text-5xl not-italic font-normal lg:leading-[48px] xl:leading-[56px] pt-9 pb-4 lg:pl-20 lg:pr-20 xl:pl-28 xl:pr-40">Faster, easier, more convenienty</h2>
+                    <p class="text-nevada text-base not-italic font-normal leading-6 mb-8 lg:pl-20 lg:pr-36 xl:pl-28 xl:pr-40">That’s what your customers want. Keep the conversation flowing from chat to video to cobrowsing and more as you answer their questions.</p>
+                    <a class="inline-block text-mine_shaft text-base not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full sm:py-4 xl:py-5 sm:px-5 xl:px-9 mb-10 lg:ml-20 xl:ml-28 hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Get started 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Part 2 End  -->
+
+    <!-- Services Part 3 Start -->
+    <section class="sm:mt-4 md:mt-24 md:mb-20 lg:pl-4 xl:ml-32 md:overflow-hidden sm:overflow-hidden lg:overflow-hidden xl:overflow-hidden">
+        <div class="container">
+            <div class="sm:flex sm:flex-col-reverse sm:items-center md:flex-row md:flex md:justify-between md:items-center">
+                <div class="w-1/3 md:pl-2 lg:pl-0">
+                    <h2 class="text-night_rider sm:text-2xl lg:text-3xl xl:text-5xl not-italic font-normal lg:leading-[48px] xl:leading-[56px] pt-1 lg:pt-14 lg:pl-4 xl:pl-0 xl:pr-[29px]">Show and tell at its finest</h2>
+                    <p class="text-nevada text-xl md:text-base not-italic font-normal md:leading-4 lg:leading-7 lg:pl-2 xl:pl-0 xl:mr-2 mt-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4">Collaborate with customers anywhere on your website or mobile app with cobrowsing. Make it easy to solve issues, complete forms, and find answers — all without any downloads.</p>
+                    <a class="inline-block text-mine_shaft text-base not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full sm:py-4 xl:py-5 sm:px-5 xl:px-9 lg:mb-14 lg:ml-4 xl:ml-0 hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Get started 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="w-2/3 md:mr-4 lg:mr-[-150px]">
+                    <img src="./img/Group 90.png" alt="Services-2">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Part 3 End -->
+
+    <!-- Services Part 4 Start -->
+    <section class="sm:mt-4 md:mt-32 lg:ml-0 xl:ml-32 sm:mb-4 md:mb-32 sm:overflow-hidden md:overflow-hidden lg:overflow-hidden">
+        <div class="container">
+            <div class="sm:flex sm:flex-col md:flex md:justify-between md:items-center md:flex-row">
+                <div class="md:w-1/2">
+                    <img src="./img/Design.png" alt="Services-4">
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="flex flex-col items-center md:flex-none sm:ml-0">
+                        <h2 class="text-night_rider sm:text-2xl lg:text-2xl xl:text-5xl not-italic font-normal lg:leading-8 xl:leading-[56px] sm:pt-4 md:pt-16 lg:pt-40 xl:pt-16 lg:pl-36 lg:pr-32">Be Available 24/7 with AI Chatbot</h2>
+                        <div class="mt-4">
+                            <ul>
+                                <li class="flex items-center gap-x-3 sm:mb-4 lg:mb-2 xl:mb-4 pl-2 lg:pl-36 lg:pr-12 xl:pl-36 xl:pr-40">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="26" height="26" rx="6" fill="#8AE5A3"/>
+                                    <path d="M19.001 7.99951L10.6372 17.5995L7.00098 13.9072" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                                    </svg>
+                                    <p class="text-nevada md:text-sm xl:text-base not-italic font-normal leading-6">Engage your customers with real time answers to FAQs.</p>
+                                </li>
+    
+                                <li class="flex items-center gap-x-3 sm:mb-4 lg:mb-2 xl:mb-4 pl-2 lg:pl-36 xl:pl-36 xl:pr-40">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="6" fill="#8AE5A3"/>
+                                        <path d="M19.001 7.99951L10.6372 17.5995L7.00098 13.9072" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                                    </svg>
+                                    <p class="text-nevada md:text-sm xl:text-base not-italic font-normal leading-6">Deliver 24x7 assistance when your sales/support team is away.</p>
+                                </li>
+    
+                                <li class="flex items-center gap-x-3 lg:mb-2 xl:mb-4 pl-2 lg:pl-36 xl:pl-36 xl:pr-40">  
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="6" fill="#8AE5A3"/>
+                                        <path d="M19.001 7.99951L10.6372 17.5995L7.00098 13.9072" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                                    </svg>
+                                    <p class="text-nevada md:text-sm xl:text-base not-italic font-normal leading-6">Stregthen customer relationships by offering
+                                    personalized experience.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a class="inline-block text-mine_shaft text-base not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full sm:py-4 xl:py-5 sm:px-5 xl:px-9 sm:mt-4 sm:mb-4 sm:mr-[210px] md:mr-56 md:mb-16 xl:mb-0 lg:mr-20 xl:mr-[236px] hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Read More 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Part 4 End -->
+
+    <!-- Customer Service Start -->
+    <section class="bg-floral_white">
+        <div class="container">
+            <div class="sm:flex sm:flex-col-reverse md:flex md:flex-row md:justify-between md:items-center">
+                <div class="w-1/2 ml-2 lg:ml-8 xl:ml-32">
+                    <h2 class="text-night_rider sm:text-3xl lg:text-4xl xl:text-5xl not-italic font-normal leading-3 md:leading-[56px] sm:pt-8 md:pt-0 pb-2 md:pb-0 lg:pb-2 lg:pr-40 xl:pb-5 xl:pt-36 xl:pr-72">Assist your Customers on the go</h2>
+                    <p class="text-nevada text-base not-italic font-normal leading-6 sm:mb-6 md:mb-9 lg:pr-52 xl:pr-[359px]">With Attain mobile apps available on ios and Android platforms</p>
+                    <div class="sm:mb-8 md:mb-0 xl:mb-24 flex">
+                        <img src="./img/image 76.png" class="pr-5" alt="googlePlaystore">
+                        <img src="./img/image 77.png" alt="appleStore">
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:ml-12 md:mr-2 lg:mr-20 xl:ml-32 xl:mr-0 mt-9">
+                    <img src="./img/Muckup.png" alt="CustomerService">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Customer Service End -->
+
+    <!-- Customer Review Start -->
+    <section class="sm:mt-4 md:mt-32">
+        <div class="container">
+            <div class="sm:flex sm:flex-col md:flex-row md:flex md:justify-between md:items-center">
+               <div class="md:w-2/3 xl:w-1/2 ml-2 mr-2 md:mr-0 md:ml-8 lg:ml-4 xl:ml-32">
+                    <img src="./img/Image (1).png" alt="customerReview">
+               </div> 
+
+               <div class="pl-2 pr-2 md:pl-10 md:pr-20 lg:pr-0 lg:pl-4 xl:pl-36">
+                    <h2 class="text-night_rider sm:text-2xl lg:text-3xl xl:text-5xl not-italic font-normal leading-[56px] lg:mb-6 xl:mb-7 lg:mr-2 xl:mr-64 lg:mt-1 xl:mt-9">What our customers are saying</h2>
+                    <p class="text-nevada text-lg not-italic font-normal lg:leading-5 xl:leading-7 lg:mb-4 xl:mb-9 lg:mr-8 xl:pr-52">“We don’t want our customers to have to do much to get what they need. And Acquire is a cornerstone of that because it helps us achieve our goal.”</p>
+                    <h3 class="text-mine_shaft md:text-xl xl:text-2xl not-italic font-normal leading-9 lg:w-[458px] xl:w-[550px] lg:h-[28px] xl:h-[34px] lg:mb-9 xl:mb-11 lg:mr-28 xl:mr-40">– Debid Goodman, Customer Experience Lead, HLC</h3>
+                    <div class="flex justify-between items-center lg:mr-28 xl:mr-40 mb-11">
+                        <a class="text-mine_shaft text-base not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full mt-4 lg:mt-0 sm:py-2 md:py-4 xl:py-5 sm:px-3 md:px-5 xl:px-9 hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Read the story 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <div class="mt-4 md:mt-0 flex justify-between items-center">
+                            <a href="#" class="inline-block lg:p-2 xl:p-4 border-2 rounded-full border-nevada stroke-1 stroke-dark_gray hover:bg-mine_shaft transition transform duration-500 group/btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M23.5718 15L4.68785 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M14.2861 24.5984L4.68792 15.0002L14.2861 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <span class="pl-3 pr-3"> 2/3 </span>
+                            <a href="#" class="block lg:p-2 xl:p-4 border-2 rounded-full border-nevada stroke-1 stroke-dark_gray hover:bg-mine_shaft transition transform duration-500 group/btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" fill="none">
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.125 10H16.875" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- Customer Review End -->
+
+    <!-- Trusted Clients Start -->
+    <section class="sm:mt-0 md:mt-28 sm:bg-cover md:bg-cover lg:bg-cover xl:bg-cover sm:h-[172px] md:h-[320px] lg:h-[400px] xl:h-[570px] sm:overflow-hidden" style="background-image: url(./img/Trusted\ Client.png);">
+        <div class="container">
+            <h2 class="text-night_rider md:text-3xl lg:text-4xl xl:text-5xl not-italic font-normal leading-14 lg:text-center pt-1 md:pt-4 lg:pt-10 xl:pt-14 ml-[144px] md:ml-[266px] lg:ml-[298px] xl:ml-[400px] lg:mr-[300px] xl:mr-[400px]">Plug into your world
+            </h2>
+            <p class="text-nevada sm:text-[6px] md:text-sm lg:text-base not-italic font-normal sm:leading-4 md:leading-[26px] text-center pt-0 md:pt-2 lg:pt-4 xl:pt-9 ml-[130px] mr-[120px] md:ml-[238px] md:mr-[200px] lg:ml-[366px] lg:mr-[358px] xl:ml-[470px] xl:mr-[474px]">Easily connect your favorite tools and do more from one place. Quickly deploy integrations with your CRM, payment platform, and help desks so your team can continue to amaze customers.</p>
+            <div class="sm:mt-4 md:pt-6 lg:pt-10 xl:pt-28">
+                <a class="text-[8px] md:text-base text-mine_shaft not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full py-1 md:py-2 lg:py-4 xl:py-5 px-2 md:px-3 lg:px-5 xl:px-9 ml-[180px] md:ml-[346px] lg:ml-[450px] xl:ml-[640px] hover:bg-mine_shaft hover:text-white hover:duration-500 group/btn" href="#">Read More 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M2 10L10 2" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.5 2H10V8.5" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Trusted Clients End -->
+
+    <!-- Blog Part Start -->
+    <section class="sm:mt-8 md:mt-[116px] sm:overflow-hidden md:overflow-hidden lg:overflow-hidden xl:overflow-hidden">
+        <div class="container">
+            <div class="sm:mb-4 lg:mb-0 sm:flex sm:flex-end lg:flex lg:justify-between lg:flex-row">
+                <div class="w-1/3 sm:pl-2 md:ml-2 lg:ml-10 xl:ml-36">
+                    <h2 class="text-night_rider sm:text-sm md:text-2xl lg:text-3xl xl:text-5xl not-italic font-normal sm:leading-10 lg:leading-[50px] xl:leading-[56px] mb-2">Checkout Our Blog</h2>
+                    <p class="text-nevada sm:text-xs lg:text-base not-italic font-normal sm:leading-3 md:leading-4 xl:leading-6">Stay updated with the latest trends and ideas we share</p>
+                </div>
+
+                <div class="w-1/3">
+                    <div class="flex justify-end items-center sm:mr-[-80px] md:mr-[-240px] lg:mr-32">
+                        <a href="#" class="inline-block sm:mr-2 md:mr-4 lg:mr-8 md:p-2 lg:p-4 border-2 rounded-full border-nevada stroke-1 stroke-dark_gray hover:bg-mine_shaft transition transform duration-500 group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M23.5718 15L4.68785 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M14.2861 24.5984L4.68792 15.0002L14.2861 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="block md:p-2 lg:p-4 border-2 rounded-full border-nevada stroke-1 stroke-dark_gray hover:bg-mine_shaft transition transform duration-500 group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" fill="none">
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M3.125 10H16.875" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+
+            <!-- Blog Card Part Start -->
+            <div class="md:flex md:flex-row md:items-center lg:flex md:gap-x-4 lg:gap-x-6 lg:mt-12 md:justify-center lg:flex-row">
+                <div class="bg-white sm:w-[400px] xl:w-[484px] sm:h-[500px] xl:h-[518px] overflow-hidden shadow-lg relative sm:mb-2 lg:mb-0 ml-3 md:ml-0">
+                    <div class="hover:scale-110 duration-500">
+                        <div class="bg-white text-mine_shaft text-base not-italic font-normal leading-6 px-5 py-2.5 absolute sm:top-5 sm:left-5 md:left-0 md:top-0 lg:left-5 lg:top-5">
+                            <p>July 26, 2021</p>
+                        </div>
+                        <img class="w-full" src="./img/photo.jpg" alt="Blog1">  
+                    </div>                    
+                    <div class="pl-2 lg:pl-9">
+                        <a href="#" class="inline-block text-mine_shaft sm:text-2xl md:text-xl lg:text-2xl not-italic font-normal leading-9 pt-4
+                        pb-6 pr-16">Bot Name : Steps to Give Your Chatbot a Unique Identity</a>
+                        <div class="flex justify-between">
+                            <p class="text-nevada text-base not-italic font-normal leading-6 mr-4 pb-16">Dui aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                            <div class="md:mt-28 lg:mt-16 lg:mb-0 mr-9 xl:mt-0">
+                                <a href="#" class="inline-block p-4 border-2 border-solid border-dark_gray  rounded-full hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg]  hover:border-none group/btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500"  d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="bg-white sm:w-[400px] xl:w-[484px] sm:h-[500px] xl:h-[518px] overflow-hidden shadow-lg relative sm:mb-2 md:mb-0 lg:mb-0 ml-3 md:ml-0">
+                    <div class="hover:scale-110 duration-500">
+                        <div class="bg-white text-mine_shaft text-base not-italic font-normal leading-6 px-5 py-2.5 absolute sm:top-5 md:top-0 lg:top-5 sm:left-5 md:left-0 lg:left-5 md:mb-2 lg:mb-0">
+                            <p>July 26, 2021</p>
+                        </div>
+                        <img class="w-full" src="./img/photo (1).png" alt="Blog1"> 
+                    </div>                     
+                    <div class="pl-2 lg:pl-9">
+                        <a href="#" class="inline-block text-mine_shaft sm:text-2xl md:text-xl lg:text-2xl not-italic font-normal leading-9 pt-4 
+                        mb-6 pr-16">Shopify Marketing Strategies and Tips to Skyrocket Your ROI</a>
+                        <div class="flex justify-between pb-16">
+                            <p class="text-nevada text-base not-italic font-normal leading-6 mr-4">Dui aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                            <div class="md:mt-28 lg:mt-16 lg:mb-0 mr-9 xl:mt-0">
+                                <a href="#" class="inline-block p-4 border-2 border-solid border-dark_gray  rounded-full hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg]  hover:border-none group/btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500"  d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>  
+                
+                <div class="bg-white sm:w-[400px] xl:w-[484px] sm:h-[500px] xl:h-[518px] overflow-hidden shadow-lg relative md:mr-0 lg:mr-[-320px] xl:mr-[-356px] ml-3 md:ml-0">
+                    <div class="hover:scale-110 duration-500">
+                        <div class="bg-white text-mine_shaft text-base not-italic font-normal leading-6 px-5 py-2.5 absolute sm:top-5 sm:left-5 md:left-0 md:top-0 lg:left-5 lg:top-5">
+                            <p>July 26, 2021</p>
+                        </div>
+                        <img class="w-full" src="./img/photo 2.jpg" alt="Blog1">
+                    </div>                      
+                    <div class="pl-2 lg:pl-9">
+                        <a href="#" class="inline-block text-mine_shaft sm:text-2xl md:text-xl lg:text-2xl not-italic font-normal leading-9 pt-4   
+                        pb-6 pr-16">Top Artificial Intelligence (AI) Trends for 2022</a>
+                        <div class="flex justify-between pb-16">
+                            <p class="text-nevada text-base not-italic font-normal leading-6 mr-4">Dui aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                            <div class="md:mt-36 lg:mt-16 lg:mb-0 mr-9 xl:mt-0">
+                                <a href="#" class="inline-block p-4 border-2 border-solid border-dark_gray  rounded-full hover:bg-mine_shaft hover:duration-500 hover:rotate-[-45deg]  hover:border-none group/btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500" d="M6.42822 15L25.3121 15" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path class="group-hover/btn:stroke-white group-hover/btn:duration-500"  d="M15.7139 24.5984L25.3121 15.0002L15.7139 5.40196" stroke="#383737" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>    
+            <!-- Blog Card Part End -->           
+        </div>
+    </section>
+    <!-- Blog Part End -->
+
+    <!-- Footer Part Start -->
+    <footer class="sm:mt-1 md:mt-32 bg-night_rider md:overflow-hidden lg:overflow-hidden">
+        <div class="container">
+            <!-- Footer Upper Part Start -->
+            <div class="md:flex md:flex-col lg:flex lg:justify-between lg:items-center lg:flex-row">
+                <!-- Footer Part One Start -->
+                <div class="flex flex-col mt-24">
+                    <h4 class="text-white text-lg not-italic font-medium leading-5 mb-2 md:ml-1 lg:ml-2 xl:ml-28 hover:text-floral_white duration-500 sm:mt-10 md:mt-0">Follow us:</h4>
+                    <div class="flex items-center pl-2 gap-x-24 md:gap-x-12 lg:gap-x-8 xl:gap-x-4">
+                        <a href="#" class="inline-block lg:p-[2px] xl:p-2 bg-white border-2 border-solid border-white rounded-full md:ml-1 lg:ml-2 xl:ml-28 md:mr-1 lg:mr-2 xl:mr-2 hover:bg-black hover:border-black duration-100 group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path class="group-hover/btn:fill-white group-hover/btn:duration-100" d="M19.9991 3H3.99908C3.73387 3 3.47951 3.10536 3.29198 3.29289C3.10444 3.48043 2.99908 3.73478 2.99908 4V20C2.99908 20.2652 3.10444 20.5196 3.29198 20.7071C3.47951 20.8946 3.73387 21 3.99908 21H19.9991C20.2643 21 20.5187 20.8946 20.7062 20.7071C20.8937 20.5196 20.9991 20.2652 20.9991 20V4C20.9991 3.73478 20.8937 3.48043 20.7062 3.29289C20.5187 3.10536 20.2643 3 19.9991 3ZM8.33808 18.337H5.66608V9.747H8.33808V18.337ZM7.00208 8.574C6.59153 8.574 6.19779 8.41091 5.90748 8.1206C5.61718 7.8303 5.45408 7.43656 5.45408 7.026C5.45408 6.61545 5.61718 6.22171 5.90748 5.9314C6.19779 5.64109 6.59153 5.478 7.00208 5.478C7.41264 5.478 7.80638 5.64109 8.09669 5.9314C8.38699 6.22171 8.55008 6.61545 8.55008 7.026C8.55008 7.43656 8.38699 7.8303 8.09669 8.1206C7.80638 8.41091 7.41264 8.574 7.00208 8.574ZM18.3371 18.337H15.6681V14.16C15.6681 13.164 15.6501 11.883 14.2801 11.883C12.8901 11.883 12.6791 12.969 12.6791 14.09V18.338H10.0121V9.748H12.5721V10.922H12.6091C12.9641 10.247 13.8361 9.535 15.1331 9.535C17.8371 9.535 18.3361 11.313 18.3361 13.627V18.337H18.3371Z" fill="#383737"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="inline-block lg:p-[2px] xl:p-2 bg-white border-2 border-solid border-white rounded-full md:mr-1 lg:mr-2 xl:mr-2 hover:bg-black hover:border-black duration-100 group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path class="group-hover/btn:fill-white group-hover/btn:duration-100" d="M19.632 7.9968C19.645 8.1718 19.645 8.3458 19.645 8.5198C19.645 13.8448 15.592 19.9808 8.18496 19.9808C5.90296 19.9808 3.78296 19.3198 1.99896 18.1718C2.32296 18.2088 2.63496 18.2218 2.97196 18.2218C4.78496 18.2262 6.54661 17.6199 7.97296 16.5008C7.13238 16.4856 6.31754 16.2083 5.6422 15.7075C4.96686 15.2068 4.46475 14.5077 4.20596 13.7078C4.45496 13.7448 4.70496 13.7698 4.96696 13.7698C5.32796 13.7698 5.69096 13.7198 6.02796 13.6328C5.11572 13.4486 4.29544 12.9541 3.70658 12.2335C3.11773 11.5128 2.79666 10.6104 2.79796 9.6798V9.6298C3.33496 9.9288 3.95796 10.1158 4.61796 10.1408C4.06505 9.77338 3.61168 9.27482 3.2983 8.68959C2.98492 8.10436 2.82128 7.45065 2.82196 6.7868C2.82196 6.0388 3.02096 5.3528 3.36996 4.7548C4.3821 5.99982 5.64447 7.01836 7.0753 7.74446C8.50613 8.47055 10.0735 8.88801 11.676 8.9698C11.614 8.6698 11.576 8.3588 11.576 8.0468C11.5757 7.51776 11.6797 6.99386 11.882 6.50504C12.0844 6.01622 12.3811 5.57207 12.7551 5.19799C13.1292 4.8239 13.5734 4.52721 14.0622 4.32488C14.551 4.12254 15.0749 4.01854 15.604 4.0188C16.764 4.0188 17.811 4.5048 18.547 5.2908C19.4487 5.11642 20.3135 4.78722 21.103 4.3178C20.8024 5.24862 20.1727 6.0379 19.332 6.5378C20.1318 6.44658 20.9134 6.23625 21.651 5.9138C21.1001 6.7169 20.4175 7.42114 19.632 7.9968Z" fill="#383737"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="inline-block lg:p-[2px] xl:p-2 bg-white border-2 border-solid border-white rounded-full md:mr-1 lg:mr-2 xl:mr-2 hover:bg-black hover:border-black duration-100 group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path class="group-hover/btn:fill-white group-hover/btn:duration-100" d="M13.396 20.9972V12.8012H16.161L16.572 9.59217H13.396V7.54817C13.396 6.62217 13.654 5.98817 14.983 5.98817H16.667V3.12717C15.8476 3.03936 15.024 2.99696 14.2 3.00017C11.756 3.00017 10.078 4.49217 10.078 7.23117V9.58617H7.33099V12.7952H10.084V20.9972H13.396Z" fill="#383737"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="inline-block lg:p-[2px] xl:p-2 bg-white border-2 border-solid border-white rounded-full md:mr-96 lg:mr-44 xl:mr-56 hover:bg-black hover:border-black duration-100 group/btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path class="group-hover/btn:fill-white group-hover/btn:duration-100" d="M21.5264 7.184C21.5992 7.48267 21.6628 7.83733 21.7083 8.28533C21.781 8.71467 21.8264 9.15333 21.8537 9.592C21.8719 10.0027 21.8901 10.3947 21.8901 10.7587L21.9173 11.6733V12C21.9173 14.184 21.7901 15.808 21.5264 16.8533C21.4078 17.2731 21.1857 17.6543 20.8815 17.9601C20.5773 18.2659 20.2014 18.4858 19.7901 18.5987C19.3355 18.72 18.4901 18.8133 17.2355 18.888C15.981 18.9347 14.8264 18.9813 13.781 19H12.2264C8.18098 19 5.65371 18.8693 4.6628 18.5987C4.24441 18.5012 3.86058 18.2864 3.55402 17.9783C3.24746 17.6702 3.03021 17.2807 2.92643 16.8533C2.80825 16.3867 2.70825 15.752 2.63553 14.9493L2.54462 12.8773V12C2.54462 9.83467 2.67189 8.22933 2.93553 7.184C3.0462 6.75761 3.264 6.36853 3.56712 6.05569C3.87024 5.74284 4.24807 5.5172 4.6628 5.40133C5.11734 5.28 5.9628 5.196 7.21734 5.14933C8.47189 5.07467 9.63553 5.028 10.6719 5H12.2264C16.2719 5 18.7992 5.13067 19.7901 5.40133C20.2065 5.51577 20.5862 5.74078 20.891 6.05372C21.1958 6.36666 21.415 6.75649 21.5264 7.184ZM10.2355 14.9867L15.3173 12L10.2355 9.05067V14.9867Z" fill="#383737"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="lg:ml-2 xl:ml-28 mt-8 lg:mr-2 xl:mr-32 mb-4 md:w-[356px] lg:w-[324px] xl:w-[360px] h-px stroke-2 stroke-mine_shaft bg-white"></div>
+                    <p class="md:mr-[280px] lg:ml-0 xl:ml-28 mb-8 lg:pr-0 xl:pr-2 text-silver text-base not-italic font-normal leading-6 sm:text-center duration-100">Subscribe to our newsletter. Get Attain content straight to your inbox.</p>                            
+                    <div class="md:flex md:flex-col xl:flex xl:justify-between xl:flex-row xl:items-center">
+                        <div class="sm:mb-6 md:mb-2 lg:mb-4 xl:mb-0 lg:ml-1 xl:ml-32">
+                            <input type="email" name="" id="" class="bg-mine_shaft text-nevada rounded-full py-3.5
+                            lg:pl-0 xl:pl-0 lg:mr-2 sm:text-center md:text-center lg:text-center xl:text-center" value="Enter your email address">
+                        </div>
+                        <a href="#" class="text-snow text-base not-italic font-medium leading-4 border-2 border-solid border-mine_shaft rounded-full sm:text-center md:text-center lg:text-center sm:py-4 xl:py-5 sm:px-5 xl:px-9 bg-mine_shaft md:mr-[520px] lg:mr-80 xl:mr-56 hover:bg-night_rider hover:text-white duration-100">Subscribe</a>
+                    </div>
+                </div>
+                <!-- Footer Part One End -->
+
+                <!-- Footer Part Two Start -->
+                <div class="flex flex-col sm:mt-6 md:mt-8 lg:mt-28">
+                    <div class="sm:mb-6 md:mb-4 lg:mb-16">
+                        <h4 class="text-white lg:text-base xl:text-lg not-italic font-medium leading-4 lg:mr-9 xl:mr-28 sm:mb-2 md:mb-2 lg:mb-7 hover:text-floral_white duration-100">Company</h4>
+                        <ul class="flex flex-col">
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">About</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Careers</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Become a Partner</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <h4 class="text-white lg:text-base xl:text-lg not-italic font-normal leading-4 lg:mr-9 xl:mr-36 sm:mb-2 lg:mb-7 hover:text-floral_white duration-100">Industry</h4>
+                    <ul class="flex flex-col">
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6
+                        hover:text-white duration-100">Retail</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Finance</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Airlines</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Part Two End -->
+
+                <!-- Footer Part Three Start -->
+                <div class="flex flex-col sm:mt-4 lg:mt-28">
+                    <div class="sm:mb-6 md:mb-4 lg:mt-[-40px] xl:mt-[-40px]">
+                        <h4 class="text-white lg:text-base xl:text-lg not-italic font-medium leading-4 lg:mr-24 xl:mr-36 sm:mb-2 xl:mb-7 hover:text-floral_white duration-100">Security</h4>
+                        <ul class="flex flex-col">
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">System Status</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">GDPR</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Become a Partner</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <h4 class="text-white lg:text-base xl:text-lg not-italic font-medium leading-4 sm:mb-2 lg:mb-7 hover:text-floral_white duration-100">Use Cases</h4>
+                    <ul class="flex flex-col">
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Conversational Support</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Conversational Engagement</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Conversational Marketing</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Part Three End -->
+
+                <!-- Footer Part Four Start -->
+                <div class="flex flex-col sm:mt-6 md:mt-6 lg:mt-[110px] xl:mt-20 sm:mb-6 md:mb-2 lg:mb-28">
+                    <h4 class="text-white lg:text-base xl:text-lg not-italic font-medium leading-4 lg:mr-16 xl:mr-32 sm:mb-2 lg:mb-7 hover:text-floral_white duration-100">Solutions</h4>
+                    <ul class="flex flex-col mr-16">
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Email</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Voice & SMS</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Integrations</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Knowledge Base</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Unified Agent View</a></li>
+                        <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Shopify</a></li>
+                    </ul> 
+                </div>
+                <!-- Footer Part Four End -->
+
+                <!-- Footer Part Five Start -->
+                <div class="lg:flex lg:flex-col">
+                    <div class="flex flex-col sm:mt-6 md:mt-4 lg:mt-24 xl:mt-28 sm:mb-6 md:mb-6 lg:mb-32">
+                        <h4 class="text-white lg:text-base xl:text-lg not-italic font-medium leading-5 mr-8 sm:mb-2 lg:mb-7 hover:text-floral_white duration-100">Resources</h4>
+                        <ul class="flex flex-col">
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Blog</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Watch a Demo</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Academy</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6
+                            hover:text-white duration-100">Webinars</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">What's New</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">Developers</a></li>
+                            <li><a href="#" class="text-silver lg:text-sm xl:text-base not-italic font-normal leading-6 hover:text-white duration-100">App Store</a></li>
+                        </ul> 
+                    </div>
+                </div>
+                <!-- Footer Part Five End -->
+            </div>
+            <!-- Footer Upper Part End -->
+
+            <!-- Footer Lower Part Start -->
+            <div class="flex justify-between items-center lg:ml-2 xl:ml-32">
+                <div class="sm:mt-6 md:mt-4 lg:mt-32 sm:mb-4 md:mb-10 lg:mb-20 lg:mr-2 xl:mr-64">
+                    <a href="#" class="inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="121" height="30" viewBox="0 0 121 30" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15C0 6.68239 7.01557 0 15.4552 0C24.0194 0 31.138 6.78115 31.138 15.2206V26.8665C31.1395 26.9727 31.1394 27.0778 31.1376 27.1818C31.1098 28.7557 29.7895 30.0135 28.1794 29.9999C26.5693 29.9863 25.2714 28.7065 25.2714 27.1324V26.9115C25.2404 25.484 24.5372 23.1479 22.8987 21.151C21.2774 19.175 18.8439 17.6471 15.3434 17.6471C13.7233 17.6471 12.4101 16.3632 12.4101 14.7794C12.4101 13.1957 13.7233 11.9118 15.3434 11.9118C19.4872 11.9118 22.7927 13.3271 25.2714 15.3571V15.2206C25.2714 10.0153 20.848 5.73529 15.4552 5.73529C10.187 5.73529 5.86658 9.91658 5.86658 15C5.86658 20.1168 10.1095 24.2647 15.3434 24.2647H15.569C17.189 24.2647 18.5023 25.5486 18.5023 27.1324C18.5023 28.7161 17.189 30 15.569 30H15.3434C6.86946 30 0 23.2843 0 15Z" fill="#1FB07E"/>
+                            <path d="M51.9362 20.5037H42.8205L41.1413 25.1537H38.2627L45.8191 4.36373H48.9676L56.494 25.1537H53.6154L51.9362 20.5037ZM51.1566 18.2837L47.3784 7.72373L43.6002 18.2837H51.1566Z" fill="white"/>
+                            <path d="M62.516 10.9637V20.6537C62.516 21.4537 62.6859 22.0237 63.0258 22.3637C63.3656 22.6837 63.9553 22.8437 64.7949 22.8437H66.804V25.1537H64.3452C62.8259 25.1537 61.6864 24.8037 60.9268 24.1037C60.1671 23.4037 59.7873 22.2537 59.7873 20.6537V10.9637H57.6583V8.71373H59.7873V4.57373H62.516V8.71373H66.804V10.9637H62.516Z" fill="white"/>
+                            <path d="M72.8389 10.9637V20.6537C72.8389 21.4537 73.0088 22.0237 73.3486 22.3637C73.6884 22.6837 74.2782 22.8437 75.1178 22.8437H77.1268V25.1537H74.668C73.1487 25.1537 72.0092 24.8037 71.2496 24.1037C70.49 23.4037 70.1101 22.2537 70.1101 20.6537V10.9637H67.9812V8.71373H70.1101V4.57373H72.8389V8.71373H77.1268V10.9637H72.8389Z" fill="white"/>
+                            <path d="M78.8138 16.8737C78.8138 15.1937 79.1536 13.7237 79.8333 12.4637C80.5129 11.1837 81.4425 10.1937 82.6219 9.49373C83.8214 8.79373 85.1507 8.44373 86.6101 8.44373C88.0494 8.44373 89.2988 8.75373 90.3583 9.37373C91.4178 9.99373 92.2074 10.7737 92.7271 11.7137V8.71373H95.4858V25.1537H92.7271V22.0937C92.1874 23.0537 91.3778 23.8537 90.2983 24.4937C89.2388 25.1137 87.9994 25.4237 86.5801 25.4237C85.1208 25.4237 83.8014 25.0637 82.6219 24.3437C81.4425 23.6237 80.5129 22.6137 79.8333 21.3137C79.1536 20.0137 78.8138 18.5337 78.8138 16.8737ZM92.7271 16.9037C92.7271 15.6637 92.4773 14.5837 91.9775 13.6637C91.4777 12.7437 90.7981 12.0437 89.9385 11.5637C89.0989 11.0637 88.1693 10.8137 87.1498 10.8137C86.1303 10.8137 85.2007 11.0537 84.3611 11.5337C83.5215 12.0137 82.8518 12.7137 82.3521 13.6337C81.8523 14.5537 81.6024 15.6337 81.6024 16.8737C81.6024 18.1337 81.8523 19.2337 82.3521 20.1737C82.8518 21.0937 83.5215 21.8037 84.3611 22.3037C85.2007 22.7837 86.1303 23.0237 87.1498 23.0237C88.1693 23.0237 89.0989 22.7837 89.9385 22.3037C90.7981 21.8037 91.4777 21.0937 91.9775 20.1737C92.4773 19.2337 92.7271 18.1437 92.7271 16.9037Z" fill="white"/>
+                            <path d="M100.907 6.04373C100.387 6.04373 99.9472 5.86373 99.5873 5.50373C99.2275 5.14373 99.0476 4.70373 99.0476 4.18373C99.0476 3.66373 99.2275 3.22373 99.5873 2.86373C99.9472 2.50373 100.387 2.32373 100.907 2.32373C101.406 2.32373 101.826 2.50373 102.166 2.86373C102.526 3.22373 102.706 3.66373 102.706 4.18373C102.706 4.70373 102.526 5.14373 102.166 5.50373C101.826 5.86373 101.406 6.04373 100.907 6.04373ZM102.226 8.71373V25.1537H99.4974V8.71373H102.226Z" fill="white"/>
+                            <path d="M114.283 8.41373C116.282 8.41373 117.901 9.02373 119.141 10.2437C120.38 11.4437 121 13.1837 121 15.4637V25.1537H118.301V15.8537C118.301 14.2137 117.891 12.9637 117.072 12.1037C116.252 11.2237 115.133 10.7837 113.713 10.7837C112.274 10.7837 111.125 11.2337 110.265 12.1337C109.425 13.0337 109.006 14.3437 109.006 16.0637V25.1537H106.277V8.71373H109.006V11.0537C109.545 10.2137 110.275 9.56373 111.195 9.10373C112.134 8.64373 113.164 8.41373 114.283 8.41373Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+    
+                <ul class="sm:hidden md:hidden lg:flex lg:justify-between lg:items-center">
+                    <li><a href="#" class="inline-block text-dark_gray lg:text-sm xl:text-base not-italic font-normal leading-6 mt-32 mr-7 mb-20 text-center hover:text-white duration-100">Security</a><li>
+                    <li><a href="#" class="inline-block text-dark_gray lg:text-sm xl:text-base not-italic font-normal leading-6 mt-32 mr-7 mb-20 text-center hover:text-white duration-100">CookiePolicy</a></li>
+                    <li><a href="#" class="inline-block text-dark_gray lg:text-sm xl:text-base not-italic font-normal leading-6 mt-32 mr-6 mb-20 text-center hover:text-white duration-100">Privacy</a><li>
+                    <li><a href="#" class="inline-block text-dark_gray lg:text-sm xl:text-base not-italic font-normal leading-6 mt-32 mr-64 mb-20 text-center hover:text-white duration-100">Terms</a><li>
+                </ul>
+    
+                <div class="mt-8 md:mt-10 lg:mt-28 xl:mt-32 lg:mr-2 xl:mr-4 sm:mb-8 md:mb-20">
+                    <p class="text-dark_gray lg:text-sm xl:text-base not-italic font-normal leading-6 text-right hover:text-white duration-100">© Copyright 2021 Uihut 
+                    </p>
+                </div> 
+            </div>
+            <!-- Footer Lower Part End -->
+        </div>    
+    </footer>
+    <!-- Footer Part End -->
+</body>
+</html>
